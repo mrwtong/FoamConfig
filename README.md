@@ -10,7 +10,7 @@ A WinForm OpenFoam GUI for T-H-M-C coupling flow in porous media(In coding now)
 （2）主窗口：将需要配置的关键字按类别归类后使用TreeView控件显示，点击树的叶子节点来切换右侧的配置选项卡。  
 （3）面板控件类：根据TreeView的点击事件来动态的加载  
 （4）数据类：使6个数据类来保存配置文件中所需的关键字和关键字对应的值。使用Dictionary<string, string>作为数据存贮的容器，关键字作为键，关键字对应的值作为键值。  
-关键字列表：    
+2、关键字列表：  
 1、ControlDict
 （1）、Time control
 StartFrom: firstTime, startTime, latestTime
