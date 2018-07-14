@@ -1,7 +1,7 @@
 # FoamConfig
 A WinForm OpenFoam GUI for T-H-M-C coupling flow in porous media(In coding now)
 ### 一、程序目的
-该程序目的是在图形界面下配置由OpenFOAM编写的多孔介质流动多场耦合求解器，并且生成配置文件保存在Case目录下。
+该程序目的是在图形界面下配置由OpenFOAM编写的求解器，并且生成配置文件保存在Case目录下。
 #### 二、程序功能
 保存配置文件所在路径，在窗口中显示求解器需要配置的关键字，并且使用Combobox控件选择关键字的配置信息。并且根据关键词的配置情况动态加载选项卡和启用控件。
 配置完成后程序检测配置完成情况，提示没有配置的面板，并且在Case目录下生成配置文件。
