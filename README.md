@@ -11,37 +11,35 @@ A WinForm OpenFoam GUI for T-H-M-C coupling flow in porous media(In coding now)
 （3）面板控件类：根据TreeView的点击事件来动态的加载  
 （4）数据类：使6个数据类来保存配置文件中所需的关键字和关键字对应的值。使用Dictionary<string, string>作为数据存贮的容器，关键字作为键，关键字对应的值作为键值。  
 关键字列表：    
-1、ControlDict
-（1）、Time control
-StartFrom: firstTime, startTime, latestTime
-					startTime
-StopAt：endTime，writeNow，noWriteNow，nextWrite
-							endTime
+1、ControlDict  
+（1）、Time control  
+StartFrom: firstTime, startTime, latestTime,startTime  
+StopAt：endTime，writeNow，noWriteNow，nextWrite，endTime  
 DeltaT
-（2）Data Writing
-writeControl：timeStep，runTime，adjustableRunTime，cpuTime，clockTime
-writeFormat：ascii，binary
-writePrecision：6，7，8 etc.
-writeCompression(gzip): on /off
-timeFormat:fixed，scientific，general
-timePrecision：6，7，8 etc
-graphFormat：raw，gnuplot，xmgr，jplot
-2、fvSchemes
-TimeSchemes（dttSchemes）：steadyState; backward，CrankNicolson 0.9，Eluer，localEuler
-GradSchemes（gradSchemes）：Gauss linear，cellLimited Gauss linear，leastSquares，Gauss cubic:
-DivSchemes（divSchemes）：Gauss linear，Gauss upwind;，Gauss linearUpwind grad(U)，Gauss LUST grad(U)，Gauss LUST unlimitedGrad(U)，Gauss limitedLinear 1，Gauss upwind，Gauss limitedLinearV 1，Gauss linearUpwindV grad(U)，
-LaplacianSchemes（laplacianSchemes）：Gauss linear corrected，Gauss linear limited corrected 0.33，Gauss linear orthogonal; Gauss linear uncorrected;
-interpolationSchemes（interpolationSchemes）: default，linear
-snGradSchemes（snGradSchemes）: corrected，uncorrected; limited corrected 0.33; orthogonal
+（2）Data Writing  
+writeControl：timeStep，runTime，adjustableRunTime，cpuTime，clockTime  
+writeFormat：ascii，binary  
+writePrecision：6，7，8 etc.  
+writeCompression(gzip): on /off  
+timeFormat:fixed，scientific，general  
+timePrecision：6，7，8 etc  
+graphFormat：raw，gnuplot，xmgr，jplot  
+2、fvSchemes  
+TimeSchemes（dttSchemes）：steadyState; backward，CrankNicolson 0.9，Eluer，localEuler  
+GradSchemes（gradSchemes）：Gauss linear，cellLimited Gauss linear，leastSquares，Gauss cubic:  
+DivSchemes（divSchemes）：Gauss linear，Gauss upwind;，Gauss linearUpwind grad(U)，Gauss LUST grad(U)，Gauss LUST unlimitedGrad(U)，Gauss limitedLinear 1，Gauss upwind，Gauss limitedLinearV 1，Gauss linearUpwindV grad(U)，  
+LaplacianSchemes（laplacianSchemes）：Gauss linear corrected，Gauss linear limited corrected 0.33，Gauss linear orthogonal; Gauss linear uncorrected;  
+interpolationSchemes（interpolationSchemes）: default，linear  
+snGradSchemes（snGradSchemes）: corrected，uncorrected; limited corrected 0.33; orthogonal  
  
-3、fvSolution
-1、Solution under-relaxation
-Fields ：
-RelaxationFactors
-2、Linear Solver Control：
-（1）solver：PCG/PBiCGStab（perconditioner DIC/DILU，FDIC，diagonal，GAMG，none），PCG/PBiCG:，smoothSolver，GAMG，diagonal
-（2）、Smoother：GaussSeidel，symGaussSeidel，DIC/DILU，DICGaussSeidel
-（3）、tolerance：1e-06
-（4）、relTol：0.05
-3、Non-linear Solver Control：
-（1）SIMPLE，PISO，PIMPLE，IMPES
+3、fvSolution  
+1、Solution under-relaxation  
+Fields ：  
+RelaxationFactors  
+2、Linear Solver Control：  
+（1）solver：PCG/PBiCGStab（perconditioner DIC/DILU，FDIC，diagonal，GAMG，none），PCG/PBiCG:，smoothSolver，GAMG，diagonal   
+（2）、Smoother：GaussSeidel，symGaussSeidel，DIC/DILU，DICGaussSeidel  
+（3）、tolerance：1e-06  
+（4）、relTol：0.05  
+3、Non-linear Solver Control：  
+（1）SIMPLE，PISO，PIMPLE，IMPES  
